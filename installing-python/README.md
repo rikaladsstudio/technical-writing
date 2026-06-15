@@ -39,10 +39,10 @@ Check if Python is already installed on your computer.
 
 ![Download page](./images/download-page.webp)
 
-2. You'll see a big yellow button that says **"Download Python install manager"** — click it
+2. You'll see a big yellow button that says **"Download Python install manager"** - click it
 3. A file called something like `python-manager-26.2.msix` will download to your computer
 
-### Step 2 — Run the Installer
+### Step 2 - Run the Installer
 
 1. Find the downloaded file (usually in your Downloads folder) and double-click it
 2. A setup window will appear
@@ -50,10 +50,10 @@ Check if Python is already installed on your computer.
 
 3. Click **"Install Now"** (the top option is fine for most people)
 4. If Windows asks "Do you want to allow this app to make changes?", click **Yes**
-5. Wait for the installation to finish — it usually takes 1–2 minutes
+5. Wait for the installation to finish - it usually takes 1–2 minutes
 6. Click **Close** when done
 
-### Step 3 — Verify the Installation
+### Step 3 - Verify the Installation
 
 1. Open a new terminal window (close the old one first if it was open, then press `Windows key + R`, type `cmd`, press Enter)
 2. Type:
@@ -78,7 +78,7 @@ This means Python wasn't added to PATH during installation. Fix it by:
 
 ### 2. "I see Python 2.7 instead of Python 3"
 
-Python 2 is outdated and won't work with modern tools. Install Python 3 from [python.org](https://www.python.org/downloads/) — having both versions on your computer is fine.
+Python 2 is outdated and won't work with modern tools. Install Python 3 from [python.org](https://www.python.org/downloads/) - having both versions on your computer is fine.
 
 ---
 
@@ -86,8 +86,8 @@ Python 2 is outdated and won't work with modern tools. Install Python 3 from [py
 
 You'll use the terminal to run Python tools. It looks intimidating but you only need to know a few basics:
 
-- **You type commands and press Enter to run them** — nothing happens until you press Enter
-- **Nothing will break** if you type something wrong — you'll just get an error message
+- **You type commands and press Enter to run them** - nothing happens until you press Enter
+- **Nothing will break** if you type something wrong - you'll just get an error message
 - To clear the screen, type `cls` and press Enter
 - To close the terminal, type `exit` and press Enter, or just close the window
 

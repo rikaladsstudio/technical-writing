@@ -1,6 +1,6 @@
-# Kaliscan Manga Downloader — Beginner's Guide for Windows
+# Kaliscan Manga Downloader - Beginner's Guide for Windows
 
-A friendly, step-by-step guide for downloading manga from Kaliscan — no coding experience needed.
+A friendly, step-by-step guide for downloading manga from Kaliscan - no coding experience needed.
 
 ---
 
@@ -9,24 +9,24 @@ A friendly, step-by-step guide for downloading manga from Kaliscan — no coding
 Kaliscan Downloader lets you save manga chapters from the Kaliscan website directly to your computer. You can download single chapters, a range of chapters, or an entire series, and optionally convert them to PDF or CBZ (a comic book format) for easy reading.
 
 It has two modes:
-- **GUI (Graphical Interface)** — A point-and-click window, easiest for beginners ✅
-- **CLI (Command Line)** — A text-based terminal interface, for more advanced users
+- **GUI (Graphical Interface)** - A point-and-click window, easiest for beginners ✅
+- **CLI (Command Line)** - A text-based terminal interface, for more advanced users
 
 This guide focuses on the GUI, with CLI instructions at the end.
 
 ---
 
-## Before You Start — What You'll Need
+## Before You Start - What You'll Need
 
 You need to install two things: **Python** (the programming language this tool runs on) and the **tool itself**.
 
-### Step 1 — Install Python
+### Step 1 - Install Python
 
 1. See the [Python installation guide](../installing-python/README.md) for detailed instructions.
 
 ---
 
-### Step 2 — Download the Tool
+### Step 2 - Download the Tool
 
 1. Go to [https://github.com/Yui007/kaliscan-downloader](https://github.com/Yui007/kaliscan-downloader)
 2. Click the green **"Code"** button near the top right
@@ -35,21 +35,21 @@ You need to install two things: **Python** (the programming language this tool r
 
 ---
 
-### Step 3 — Open a Terminal in the Tool's Folder
+### Step 3 - Open a Terminal in the Tool's Folder
 
 You need to open a terminal *inside* the folder you just unzipped.
 
 **Windows:**
 1. Open the unzipped folder in File Explorer
 2. Click on the address bar at the top (where it shows the folder path). It will select the entire path.
-3. Type `cmd` and press Enter — a terminal will open already pointed at that folder path. It will look something like this:
+3. Type `cmd` and press Enter - a terminal will open already pointed at that folder path. It will look something like this:
    ```
    C:\where\you\extracted\kaliscan-downloader>
    ```
 
 ---
 
-### Step 4 — Install the Required Dependencies
+### Step 4 - Install the Required Dependencies
 
 In the terminal, type the following commands to set up the virtual environment. A virtual environment isolates the tool's dependencies from your system:
 
@@ -96,7 +96,7 @@ In the terminal (with the `.venv` still active), type:
 python main.py
 ```
 
-A window will appear — that's the app!
+A window will appear - that's the app!
 
 ---
 
@@ -126,9 +126,9 @@ Click **"Choose Output Folder"** and pick a folder on your computer where the ma
 **5. Pick a file format (optional)**
 
 In the "Conversion" dropdown, you can choose:
-- **None** — saves raw images (one folder per chapter)
-- **PDF** — converts each chapter to a PDF file
-- **CBZ** — converts each chapter to a comic book file (works with apps like YACReader or CDisplayEx)
+- **None** - saves raw images (one folder per chapter)
+- **PDF** - converts each chapter to a PDF file
+- **CBZ** - converts each chapter to a comic book file (works with apps like YACReader or CDisplayEx)
 
 You can also check a box to automatically delete the original images after conversion, to save disk space.
 
