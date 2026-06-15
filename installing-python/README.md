@@ -70,7 +70,7 @@ Check if Python is already installed on your computer.
    ```
    python --version
    ```
-3. You should see something like `Python 3.14.6`. If you do, Python is installed successfully!
+3. You should see something like `Python 3.14.6`. If you do, Python is installed successfully! If not, check the [Common Problems & Fixes](#common-problems--fixes) section below.
 
 ---
 
