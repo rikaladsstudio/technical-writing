@@ -47,12 +47,11 @@ You need to install two things: **Python** (the programming language this tool r
 
 ### Step 3 - Open a Terminal in the Tool's Folder
 
-You need to open a terminal *inside* the folder you just unzipped.
+You need to open a Terminal *inside* the folder you just unzipped.
 
-**Windows:**
 1. Open the unzipped folder in File Explorer
 2. Click on the address bar at the top (where it shows the folder path). It will select the entire path.
-3. Type `cmd` and press Enter - a terminal will open already pointed at that folder path. It will look something like this:
+3. Type `cmd` and press Enter - a Terminal will open already pointed at that folder path. It will look something like this:
    ```
    C:\where\you\extracted\kaliscan-downloader>
    ```
@@ -61,7 +60,7 @@ You need to open a terminal *inside* the folder you just unzipped.
 
 ### Step 4 - Install the Required Dependencies
 
-In the terminal, type the following commands to set up the virtual environment. A virtual environment isolates the tool's dependencies from your system:
+In the Terminal, type the following commands to set up the virtual environment. A virtual environment isolates the tool's dependencies from your system:
 
 ```
 python -m venv .venv
@@ -89,7 +88,7 @@ playwright install chromium
 
 Wait for each command to finish before running the next. This may take a few minutes - that's normal.
 
-> You only need to do Steps 3 and 4 once. After the first setup, you just open the terminal in the folder and run the tool. 
+> You only need to do Steps 3 and 4 once. After the first setup, you just open the Terminal in the folder and run the tool. 
 
 ---
 
@@ -101,7 +100,7 @@ Unless you have already activated the virtual environment, you need to activate 
 .venv\Scripts\activate
 ```
 
-In the terminal (with the `.venv` still active), type:
+In the Terminal (with the `.venv` still active), type:
 ```
 python main.py
 ```
@@ -150,7 +149,7 @@ Click **Download Selected** and watch the progress bar. Each chapter will be dow
 
 ## Using the CLI (Advanced Users)
 
-If you prefer the terminal, all commands use `python main.py --cli`.
+If you prefer the Terminal, all commands use `python main.py --cli`.
 
 **See manga info:**
 ```

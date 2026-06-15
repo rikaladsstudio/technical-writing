@@ -25,7 +25,7 @@ Think of it like installing Java or a printer driver: you're not going to use it
 
 Check if Python is already installed on your computer.
 
-1. Open a terminal. On Windows, press `Windows key + R`, type `cmd`, press Enter to open the terminal.
+1. Open a Terminal. On Windows, press `Windows key + R`, type `cmd`, press Enter to open the Terminal.
 
 2. Type the following and press Enter:
    ```
@@ -64,7 +64,7 @@ Check if Python is already installed on your computer.
 
 ### Step 3 - Verify the Installation
 
-1. Open a new terminal window (close the old one first if it was open, then press `Windows key + R`, type `cmd`, press Enter)
+1. Open a new Terminal window (close the old one first if it was open, then press `Windows key + R`, type `cmd`, press Enter)
 2. Type:
    ```
    python --version
@@ -83,7 +83,7 @@ This means Python wasn't added to PATH during installation. Fix it by:
 2. Navigate to Apps > Advanced app settings > App execution aliases (or search for "Manage App Execution Aliases").
 3. Turn Off the toggles for python.exe and python3.exe.
 ![App execution aliases](./images/app-execution-aliases.webp)
-4. Close and reopen your terminal, then try running `python --version` again.
+4. Close and reopen your Terminal, then try running `python --version` again.
 
 ### 2. "I see Python 2.7 instead of Python 3"
 
@@ -106,7 +106,7 @@ You'll use the terminal to run Python tools. It looks intimidating but you only 
 
 Now that Python is installed, you can go back to the tool's installation guide and continue from where it told you to install Python.
 
-If you ever need to check that Python is still working, just open a terminal and run `python --version`.
+If you ever need to check that Python is still working, just open a Terminal and run `python --version`.
 
 
 ---
