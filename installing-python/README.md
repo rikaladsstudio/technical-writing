@@ -57,9 +57,9 @@ Check if Python is already installed on your computer.
 2. A setup window will appear
 ![Setup window](./images/setup-window.webp)
 
-3. Click **"Install Now"** (the top option is fine for most people)
+3. Click **"Install Now"**
 4. If Windows asks "Do you want to allow this app to make changes?", click **Yes**
-5. Wait for the installation to finish - it usually takes 1–2 minutes
+5. Wait for the installation to finish - it usually takes 1 - 2 minutes
 6. Click **Close** when done
 
 ### Step 3 - Verify the Installation
@@ -97,6 +97,8 @@ You'll use the terminal to run Python tools. It looks intimidating but you only 
 
 - **You type commands and press Enter to run them** - nothing happens until you press Enter
 - **Nothing will break** if you type something wrong - you'll just get an error message
+- Just for fun, try typing `echo "Hello, World!"` and press Enter to see it printed back to you
+- To go to a specific folder, use `cd path\to\folder` (use backslashes on Windows)
 - To clear the screen, type `cls` and press Enter
 - To close the terminal, type `exit` and press Enter, or just close the window
 

@@ -143,7 +143,7 @@ You can also check a box to automatically delete the original images after conve
 
 **6. Download!**
 
-Click **Download Selected** and watch the progress bar. Each chapter will be downloaded in parallel for speed.
+Click **Download Selected** and watch the progress bar. Each chapter will be downloaded in parallel for speed. If you see multiple windows opening, that's normal - each window is downloading a different chapter.
 
 ---
 
@@ -191,6 +191,9 @@ python main.py --cli interactive
 
 **The chapter list won't load**
 Make sure you're using the full manga URL (the one that ends in the manga's title slug), not a chapter URL.
+
+**The downloaded chapter folder is empty**
+This usually means the chapter failed to download. Rika is still figuring out why this happens sometimes. Closing and reopening the app (and trying again) might fix it.
 
 **Downloads are slow**
 Try increasing the `--image-workers` value in CLI mode, or adjust the "Image Workers" slider in the GUI.
