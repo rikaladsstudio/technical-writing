@@ -86,16 +86,23 @@ Then install playwright for the required chromium browsers (e.g. Google Chrome, 
 playwright install chromium
 ```
 
-Wait for each command to finish before running the next. This may take a few minutes - that's normal.
+Wait for each command to finish before running the next. This may take a few minutes - that's normal. Once everything is installed, you're ready to use the tool.
 
-> You only need to do Steps 3 and 4 once. After the first setup, you just open the Terminal in the folder and run the tool. 
+Type the following command to verify that the tool is installed correctly:
+```
+python main.py
+```
+
+If the tool is installed correctly, a window will appear - that's the app!
+
 
 ---
 
 ## Using the GUI (Recommended for Beginners)
 
 ### Launching the App
-Unless you have already activated the virtual environment, you need to activate it first by typing:
+
+Open a Terminal in the tool's folder (Follow the instructions in [Step 3](#step-3---open-a-terminal-in-the-tools-folder)) and activate the virtual environment (if not already active). 
 ```
 .venv\Scripts\activate
 ```
