@@ -7,8 +7,9 @@ Never installed Python before? No problem. This guide covers everything step by 
 - [What Is Python and Why Do I Need It?](#what-is-python-and-why-do-i-need-it)
 - [Before You Start](#before-you-start)
 - [Installing Python](#installing-python)
-- [Common Problems & Fixes](#common-problems--fixes)
+- [Understanding the Terminal](#understanding-the-terminal)
 - [Next Steps](#next-steps)
+- [Common Problems & Fixes](#common-problems--fixes)
 - [References Used](#references-used)
 
 ---
@@ -35,7 +36,7 @@ Check if Python is already installed on your computer.
 3. If you see something like `Python 3.11.4`, Python is already installed and you're done! 
 ![Python already installed](./images/check-if-python-installed-success.webp)
 
-   But if you see an error or `Python 2.x.x` (an older version), follow the steps below.
+   But if you see an error or `Python 2.x.x` (an older version), you'll need to install Python 3. Follow the steps below.
    ![Missing Python](./images/check-if-python-installed-failed.webp)
 
 ---
@@ -73,24 +74,6 @@ Check if Python is already installed on your computer.
 
 ---
 
-## Common Problems & Fixes
-
-### 1. "Python is not recognized as an internal or external command" (Windows)
-
-This means Python wasn't added to PATH during installation. Fix it by:
-
-1. Press Win + I to open Settings.
-2. Navigate to Apps > Advanced app settings > App execution aliases (or search for "Manage App Execution Aliases").
-3. Turn Off the toggles for python.exe and python3.exe.
-![App execution aliases](./images/app-execution-aliases.webp)
-4. Close and reopen your Terminal, then try running `python --version` again.
-
-### 2. "I see Python 2.7 instead of Python 3"
-
-Python 2 is outdated and won't work with modern tools. Install Python 3 from [python.org](https://www.python.org/downloads/) - having both versions on your computer is fine.
-
----
-
 ## Understanding the Terminal
 
 You'll use the terminal to run Python tools. It looks intimidating but you only need to know a few basics:
@@ -110,6 +93,24 @@ Now that Python is installed, you can go back to the tool's installation guide a
 
 If you ever need to check that Python is still working, just open a Terminal and run `python --version`.
 
+
+---
+
+## Common Problems & Fixes
+
+### 1. "Python is not recognized as an internal or external command" (Windows)
+
+This means Python wasn't added to PATH during installation. Fix it by:
+
+1. Press Win + I to open Settings.
+2. Navigate to Apps > Advanced app settings > App execution aliases (or search for "Manage App Execution Aliases").
+3. Turn Off the toggles for python.exe and python3.exe.
+![App execution aliases](./images/app-execution-aliases.webp)
+4. Close and reopen your Terminal, then try running `python --version` again.
+
+### 2. "I see Python 2.7 instead of Python 3"
+
+Python 2 is outdated and won't work with modern tools. Install Python 3 from [python.org](https://www.python.org/downloads/) - having both versions on your computer is fine.
 
 ---
 
