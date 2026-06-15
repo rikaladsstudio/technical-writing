@@ -98,7 +98,7 @@ If you ever need to check that Python is still working, just open a Terminal and
 
 ## Common Problems & Fixes
 
-### 1. I got the error message "Python is not recognized as an internal or external command" when I tried to run `python --version`
+### 1. I got the error message "Python is not recognized as an internal or external command" when I tried to run `python --version` after installation
 
 This means Python wasn't added to PATH during installation. Fix it by:
 
