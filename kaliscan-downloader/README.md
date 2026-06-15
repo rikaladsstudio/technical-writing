@@ -1,4 +1,4 @@
-# Kaliscan Manga Downloader — Beginner's Guide
+# Kaliscan Manga Downloader — Beginner's Guide for Windows
 
 A friendly, step-by-step guide for downloading manga from Kaliscan — no coding experience needed.
 
@@ -22,20 +22,7 @@ You need to install two things: **Python** (the programming language this tool r
 
 ### Step 1 — Install Python
 
-1. Go to [https://www.python.org/downloads/](https://www.python.org/downloads/)
-2. Click the big yellow **"Download Python"** button
-3. Run the installer
-4. **Important:** On the first screen of the installer, check the box that says **"Add Python to PATH"** before clicking Install
-
-To check it worked, open a terminal (see below) and type:
-```
-python --version
-```
-You should see something like `Python 3.11.4`. If you do, you're good to go.
-
-> **How to open a terminal:**
-> - **Windows:** Press `Windows key + R`, type `cmd`, press Enter
-> - **Mac:** Press `Command + Space`, type `Terminal`, press Enter
+1. See the [Python installation guide](../installing-python/README.md) for detailed instructions.
 
 ---
 
@@ -54,51 +41,55 @@ You need to open a terminal *inside* the folder you just unzipped.
 
 **Windows:**
 1. Open the unzipped folder in File Explorer
-2. Click on the address bar at the top (where it shows the folder path)
-3. Type `cmd` and press Enter — a terminal will open already pointed at that folder
-
-**Mac:**
-1. Open the unzipped folder in Finder
-2. Right-click on the folder (or Control-click)
-3. Select **"New Terminal at Folder"**
+2. Click on the address bar at the top (where it shows the folder path). It will select the entire path.
+3. Type `cmd` and press Enter — a terminal will open already pointed at that folder path. It will look something like this:
+   ```
+   C:\where\you\extracted\kaliscan-downloader>
+   ```
 
 ---
 
 ### Step 4 — Install the Required Dependencies
 
-In the terminal, type each of these commands one at a time and press Enter after each:
+In the terminal, type the following commands to set up the virtual environment. A virtual environment isolates the tool's dependencies from your system:
 
 ```
 python -m venv .venv
 ```
 
-**Windows:**
+After running this command, activate the virtual environment by typing:
 ```
 .venv\Scripts\activate
 ```
 
-**Mac:**
+You should see `(venv)` at the beginning of your terminal prompt, like this. This confirms that the virtual environment is active:
 ```
-source .venv/bin/activate
+(venv) C:\where\you\extracted\kaliscan-downloader>
 ```
 
-Then:
+Then install the required dependencies by typing:
 ```
 pip install -r requirements.txt
 ```
+
+Then install playwright for the required chromium browsers (e.g. Google Chrome, Microsoft Edge, etc.) by typing:
 ```
 playwright install chromium
 ```
 
-Wait for each command to finish before running the next. This may take a few minutes — that's normal.
+Wait for each command to finish before running the next. This may take a few minutes - that's normal.
 
-> You only need to do Steps 3 and 4 once. After the first setup, you just open the terminal in the folder and run the tool.
+> You only need to do Steps 3 and 4 once. After the first setup, you just open the terminal in the folder and run the tool. 
 
 ---
 
 ## Using the GUI (Recommended for Beginners)
 
 ### Launching the App
+Unless you have already activated the virtual environment, you need to activate it first by typing:
+```
+.venv\Scripts\activate
+```
 
 In the terminal (with the `.venv` still active), type:
 ```
@@ -111,6 +102,8 @@ A window will appear — that's the app!
 
 ### Step-by-Step: Downloading Manga
 
+![](./images/gui.png)
+
 **1. Get the manga URL**
 
 Go to [kaliscan.io](https://kaliscan.io) in your browser, find the manga you want, and copy the URL from the address bar. It will look something like:
@@ -120,7 +113,7 @@ https://kaliscan.io/manga/your-manga-title
 
 **2. Paste the URL and fetch chapters**
 
-Paste the URL into the input field at the top of the app (labeled "Source & Options"), then click **Fetch Chapters**. The app will load the chapter list — this may take a moment.
+Paste the URL into the input field at the top of the app (labeled "Source & Options"), then click **Fetch Chapters**. The app will load the chapter list - this may take a moment.
 
 **3. Select which chapters to download**
 
@@ -186,9 +179,6 @@ python main.py --cli interactive
 ---
 
 ## Tips & Troubleshooting
-
-**The app says "python is not recognized"**
-You likely forgot to check "Add Python to PATH" during installation. Re-run the Python installer and look for that checkbox.
 
 **The chapter list won't load**
 Make sure you're using the full manga URL (the one that ends in the manga's title slug), not a chapter URL.
