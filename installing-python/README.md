@@ -98,7 +98,7 @@ If you ever need to check that Python is still working, just open a Terminal and
 
 ## Common Problems & Fixes
 
-### 1. "Python is not recognized as an internal or external command" (Windows)
+### 1. I got the error message "Python is not recognized as an internal or external command" when I tried to run `python --version`
 
 This means Python wasn't added to PATH during installation. Fix it by:
 
@@ -108,7 +108,7 @@ This means Python wasn't added to PATH during installation. Fix it by:
 ![App execution aliases](./images/app-execution-aliases.webp)
 4. Close and reopen your Terminal, then try running `python --version` again.
 
-### 2. "I see Python 2.7 instead of Python 3"
+### 2. I see Python 2.7 instead of Python 3
 
 Python 2 is outdated and won't work with modern tools. Install Python 3 from [python.org](https://www.python.org/downloads/) - having both versions on your computer is fine.
 
