@@ -1,0 +1,211 @@
+# Kaliscan Manga Downloader — Beginner's Guide
+
+A friendly, step-by-step guide for downloading manga from Kaliscan — no coding experience needed.
+
+---
+
+## What Is This Tool?
+
+Kaliscan Downloader lets you save manga chapters from the Kaliscan website directly to your computer. You can download single chapters, a range of chapters, or an entire series, and optionally convert them to PDF or CBZ (a comic book format) for easy reading.
+
+It has two modes:
+- **GUI (Graphical Interface)** — A point-and-click window, easiest for beginners ✅
+- **CLI (Command Line)** — A text-based terminal interface, for more advanced users
+
+This guide focuses on the GUI, with CLI instructions at the end.
+
+---
+
+## Before You Start — What You'll Need
+
+You need to install two things: **Python** (the programming language this tool runs on) and the **tool itself**.
+
+### Step 1 — Install Python
+
+1. Go to [https://www.python.org/downloads/](https://www.python.org/downloads/)
+2. Click the big yellow **"Download Python"** button
+3. Run the installer
+4. **Important:** On the first screen of the installer, check the box that says **"Add Python to PATH"** before clicking Install
+
+To check it worked, open a terminal (see below) and type:
+```
+python --version
+```
+You should see something like `Python 3.11.4`. If you do, you're good to go.
+
+> **How to open a terminal:**
+> - **Windows:** Press `Windows key + R`, type `cmd`, press Enter
+> - **Mac:** Press `Command + Space`, type `Terminal`, press Enter
+
+---
+
+### Step 2 — Download the Tool
+
+1. Go to [https://github.com/Yui007/kaliscan-downloader](https://github.com/Yui007/kaliscan-downloader)
+2. Click the green **"Code"** button near the top right
+3. Click **"Download ZIP"**
+4. Unzip the downloaded file somewhere easy to find, like your Desktop or Documents folder
+
+---
+
+### Step 3 — Open a Terminal in the Tool's Folder
+
+You need to open a terminal *inside* the folder you just unzipped.
+
+**Windows:**
+1. Open the unzipped folder in File Explorer
+2. Click on the address bar at the top (where it shows the folder path)
+3. Type `cmd` and press Enter — a terminal will open already pointed at that folder
+
+**Mac:**
+1. Open the unzipped folder in Finder
+2. Right-click on the folder (or Control-click)
+3. Select **"New Terminal at Folder"**
+
+---
+
+### Step 4 — Install the Required Dependencies
+
+In the terminal, type each of these commands one at a time and press Enter after each:
+
+```
+python -m venv .venv
+```
+
+**Windows:**
+```
+.venv\Scripts\activate
+```
+
+**Mac:**
+```
+source .venv/bin/activate
+```
+
+Then:
+```
+pip install -r requirements.txt
+```
+```
+playwright install chromium
+```
+
+Wait for each command to finish before running the next. This may take a few minutes — that's normal.
+
+> You only need to do Steps 3 and 4 once. After the first setup, you just open the terminal in the folder and run the tool.
+
+---
+
+## Using the GUI (Recommended for Beginners)
+
+### Launching the App
+
+In the terminal (with the `.venv` still active), type:
+```
+python main.py
+```
+
+A window will appear — that's the app!
+
+---
+
+### Step-by-Step: Downloading Manga
+
+**1. Get the manga URL**
+
+Go to [kaliscan.io](https://kaliscan.io) in your browser, find the manga you want, and copy the URL from the address bar. It will look something like:
+```
+https://kaliscan.io/manga/your-manga-title
+```
+
+**2. Paste the URL and fetch chapters**
+
+Paste the URL into the input field at the top of the app (labeled "Source & Options"), then click **Fetch Chapters**. The app will load the chapter list — this may take a moment.
+
+**3. Select which chapters to download**
+
+You'll see a table of chapters, each with a checkbox. Tick the ones you want. Use **Select All** to grab everything, or **Clear Selection** to start over.
+
+**4. Choose where to save your files**
+
+Click **"Choose Output Folder"** and pick a folder on your computer where the manga will be saved.
+
+**5. Pick a file format (optional)**
+
+In the "Conversion" dropdown, you can choose:
+- **None** — saves raw images (one folder per chapter)
+- **PDF** — converts each chapter to a PDF file
+- **CBZ** — converts each chapter to a comic book file (works with apps like YACReader or CDisplayEx)
+
+You can also check a box to automatically delete the original images after conversion, to save disk space.
+
+**6. Download!**
+
+Click **Download Selected** and watch the progress bar. Each chapter will be downloaded in parallel for speed.
+
+---
+
+## Using the CLI (Advanced Users)
+
+If you prefer the terminal, all commands use `python main.py --cli`.
+
+**See manga info:**
+```
+python main.py --cli scrape "https://kaliscan.io/manga/your-manga-title"
+```
+
+**Download all chapters:**
+```
+python main.py --cli download --url "https://kaliscan.io/manga/your-manga-title" --all
+```
+
+**Download a single chapter (e.g. chapter 5):**
+```
+python main.py --cli download --url "URL" --chapter 5
+```
+
+**Download a range (e.g. chapters 10 to 15):**
+```
+python main.py --cli download --url "URL" --range 10-15
+```
+
+**Interactive guided mode (recommended for CLI beginners):**
+```
+python main.py --cli interactive
+```
+
+### Useful CLI options
+
+| Option | What it does | Default |
+|---|---|---|
+| `--output` or `-o` | Where to save files | `downloads/` |
+| `--chapter-workers` | How many chapters download at once | 2 |
+| `--image-workers` | How many images download at once per chapter | 6 |
+| `--retries` | How many times to retry a failed download | 3 |
+
+---
+
+## Tips & Troubleshooting
+
+**The app says "python is not recognized"**
+You likely forgot to check "Add Python to PATH" during installation. Re-run the Python installer and look for that checkbox.
+
+**The chapter list won't load**
+Make sure you're using the full manga URL (the one that ends in the manga's title slug), not a chapter URL.
+
+**Downloads are slow**
+Try increasing the `--image-workers` value in CLI mode, or adjust the "Image Workers" slider in the GUI.
+
+**Where are my files saved?**
+By default, a `downloads/` folder is created inside the tool's folder. You can change this in the GUI by clicking "Choose Output Folder".
+
+**What's a CBZ file?**
+CBZ is a standard comic book format. To read CBZ files, download a free app like [CDisplayEx](https://www.cdisplayex.com/) (Windows) or [YACReader](https://www.yacreader.com/) (Mac/Windows/Linux).
+
+---
+
+## Need More Help?
+
+Visit the project page on GitHub: [https://github.com/Yui007/kaliscan-downloader](https://github.com/Yui007/kaliscan-downloader)
+
+You can open an "Issue" there if something isn't working.
