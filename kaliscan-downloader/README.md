@@ -2,6 +2,15 @@
 
 A friendly, step-by-step guide for downloading manga from Kaliscan - no coding experience needed.
 
+## Table of Contents
+
+- [What Is This Tool?](#what-is-this-tool)
+- [Installation](#installation)
+- [Using the GUI (Recommended for Beginners)](#using-the-gui-recommended-for-beginners)
+- [Using the CLI (Advanced Users)](#using-the-cli-advanced-users)
+- [Tips & Troubleshooting](#tips--troubleshooting)
+- [Need More Help?](#need-more-help)
+
 ---
 
 ## What Is This Tool?
@@ -15,8 +24,9 @@ It has two modes:
 This guide focuses on the GUI, with CLI instructions at the end.
 
 ---
+ ## Installation
 
-## Before You Start - What You'll Need
+### Before You Start - What You'll Need
 
 You need to install two things: **Python** (the programming language this tool runs on) and the **tool itself**.
 

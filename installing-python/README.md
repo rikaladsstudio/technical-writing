@@ -2,6 +2,15 @@
 
 Never installed Python before? No problem. This guide covers everything step by step. Note that these instructions are written for Python 3.14.6. If you're installing a newer version, most steps will be the same but some details may look a little different.
 
+## Table of Contents
+
+- [What Is Python and Why Do I Need It?](#what-is-python-and-why-do-i-need-it)
+- [Before You Start](#before-you-start)
+- [Installing Python](#installing-python)
+- [Common Problems & Fixes](#common-problems--fixes)
+- [Next Steps](#next-steps)
+- [References Used](#references-used)
+
 ---
 
 ## What Is Python and Why Do I Need It?
