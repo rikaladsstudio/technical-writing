@@ -104,7 +104,7 @@ This means Python wasn't added to PATH during installation. Fix it by:
 
 1. Press Win + I to open Settings.
 2. Navigate to Apps > Advanced app settings > App execution aliases (or search for "Manage App Execution Aliases").
-3. Turn Off the toggles for python.exe and python3.exe.
+3. Turn Off the toggles for **python.exe** and **python3.exe**.
 ![App execution aliases](./images/app-execution-aliases.webp)
 4. Close and reopen your Terminal, then try running `python --version` again.
 
