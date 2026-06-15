@@ -60,8 +60,10 @@ You need to open a Terminal *inside* the folder you just unzipped.
 
 ### Step 4 - Install the Required Dependencies
 
-In the Terminal, type the following commands to set up the virtual environment. A virtual environment isolates the tool's dependencies from your system:
+In this step, you will set up a virtual environment and install the required dependencies in that environment. A virtual environment isolates the tool's dependencies from your main system. That way, the tool's requirements won't interfere with other programs on your computer. Think of it as having a private, separated room for each of your toys or projects, instead of throwing everything into one giant, messy closet. 
 
+
+In the Terminal, type the following command to set up the virtual environment:
 ```
 python -m venv .venv
 ```
@@ -94,7 +96,9 @@ python main.py
 ```
 
 If the tool is installed correctly, a window will appear - that's the app!
+![gui](./images/gui.png)
 
+To close the app, simply click the **X** button in the top-right corner of the window. Alternatively, you can press `Ctrl + C` in the Terminal to stop the app.
 
 ---
 
@@ -117,8 +121,6 @@ A window will appear - that's the app!
 ---
 
 ### Step-by-Step: Downloading Manga
-
-![](./images/gui.png)
 
 **1. Get the manga URL**
 
