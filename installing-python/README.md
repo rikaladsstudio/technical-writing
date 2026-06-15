@@ -60,12 +60,13 @@ Check if Python is already installed on your computer.
 
 3. Click **"Install Now"**
 4. If Windows asks "Do you want to allow this app to make changes?", click **Yes**
-5. Wait for the installation to finish - it usually takes 1 - 2 minutes
-6. Click **Close** when done
+5. The installer will automatically open a new Terminal window for you to verify the installation. You will need to refer to the following walkthrough video (watch until 2:00): https://youtu.be/1-T15RttfHg?si=mbfTzhzAhqToBAg6&t=58
 
-### Step 3 - Verify the Installation
+6. When the installation is complete, you'll see a message asking "View online help? [y/N]". Type **N** and then press **Enter**. Close the Terminal window.
 
-1. Open a new Terminal window (close the old one first if it was open, then press `Windows key + R`, type `cmd`, press Enter)
+### Step 4 - Verify the Installation
+
+1. Open a new Terminal window (Press `Windows key + R`, type `cmd`, press Enter)
 2. Type:
    ```
    python --version
@@ -117,5 +118,7 @@ Python 2 is outdated and won't work with modern tools. Install Python 3 from [py
 ## References Used
 
 1. [YouTube - How to Install Python on Windows 10/11 (Step by Step Guide) by @devityworks](https://youtu.be/3E3NZRpXZyI?si=iR_7ocWQ7g6FPEWv)
+
+2. [YouTube - How to Install Python on Windows 11 using Install Manager by @ExampleProgram](https://youtu.be/1-T15RttfHg?si=M4CyemSSX56YCN2z)
 
 2. [python.org - Getting Started](https://www.python.org/about/gettingstarted/)
