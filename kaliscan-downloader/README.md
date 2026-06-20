@@ -232,7 +232,7 @@ Before retrying, be sure to select the chapters that failed to convert so the to
 
 **6. I got the error message: "Failed to convert images to PDF: Page size must be between 3 and 14,400 PDF units"**
 
-This error occurs when downloading webtoon (vertical scrolling) format manga. The images are too tall or too short to fit within the PDF page size limits. Ideally the image width or height should be between 4 and 18,666 pixels. 
+This error occurs when downloading webtoon (vertical scrolling) format manga. The images are too tall or too short to fit within the PDF page size limits. Ideally the image width or height should be between 4 and 19,200 pixels. 
 
 A workaround is to go to `downloads/` folder and find the affected chapter folder. Look for image files that are too tall or too short, and then manually delete them. After that, try downloading the chapter again. If the images are already downloaded, the tool will convert them to PDF.
 
