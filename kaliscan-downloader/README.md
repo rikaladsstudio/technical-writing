@@ -123,6 +123,8 @@ python main.py
 
 A window will appear - that's the tool!
 
+> **Note: In case if you got tired of typing the same commands over and over again, you can create a BAT file to open the GUI tool. See [CreateBATFile.md](./CreateBATFile.md) for more details. Before creating the BAT file, make sure you have successfully opened the GUI tool at least once following the instructions above.**
+
 ---
 
 ### Step-by-Step: Downloading Manga
