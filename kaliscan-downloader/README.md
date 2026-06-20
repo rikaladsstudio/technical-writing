@@ -95,10 +95,10 @@ Type the following command to verify that the tool is installed correctly:
 python main.py
 ```
 
-If the tool is installed correctly, a window will appear - that's the app!
+If the tool is installed correctly, a window will appear - that's the tool!
 ![gui](./images/gui.png)
 
-To close the app, simply click the **X** button in the top-right corner of the window. Alternatively, you can press `Ctrl + C` in the Terminal to stop the app.
+To close the tool, simply click the **X** button in the top-right corner of the window. Alternatively, you can press `Ctrl + C` in the Terminal to stop the tool.
 
 ---
 
@@ -111,12 +111,17 @@ Open a Terminal in the tool's folder (Follow the instructions in [Step 3](#step-
 .venv\Scripts\activate
 ```
 
-In the Terminal (with the `.venv` still active), type:
+You should see `(venv)` at the beginning of your terminal prompt, like this. This confirms that the virtual environment is active:
+```
+(venv) C:\where\you\extracted\kaliscan-downloader>
+```
+
+In the Terminal, type:
 ```
 python main.py
 ```
 
-A window will appear - that's the app!
+A window will appear - that's the tool!
 
 ---
 
@@ -131,7 +136,7 @@ https://kaliscan.io/manga/your-manga-title
 
 **2. Paste the URL and fetch chapters**
 
-Paste the URL into the input field at the top of the app (labeled "Source & Options"), then click **Fetch Chapters**. The app will load the chapter list - this may take a moment.
+Paste the URL into the input field at the top of the tool (labeled "Source & Options"), then click **Fetch Chapters**. The tool will load the chapter list - this may take a moment.
 
 **3. Select which chapters to download**
 
@@ -198,20 +203,43 @@ python main.py --cli interactive
 
 ## Tips & Troubleshooting
 
-**The chapter list won't load**
+**1. The chapter list won't load**
+
 Make sure you're using the full manga URL (the one that ends in the manga's title slug), not a chapter URL.
 
-**The downloaded chapter folder is empty**
-This usually means the chapter failed to download. Rika is still figuring out why this happens sometimes. Closing and reopening the app (and trying again) might fix it.
+**2. Where are my files saved?**
 
-**Downloads are slow**
-Try increasing the `--image-workers` value in CLI mode, or adjust the "Image Workers" slider in the GUI.
-
-**Where are my files saved?**
 By default, a `downloads/` folder is created inside the tool's folder. You can change this in the GUI by clicking "Choose Output Folder".
 
-**What's a CBZ file?**
+**3. What's a CBZ file?**
+
 CBZ is a standard comic book format. To read CBZ files, download a free app like [CDisplayEx](https://www.cdisplayex.com/) (Windows) or [YACReader](https://www.yacreader.com/) (Mac/Windows/Linux).
+
+**4. The downloaded chapter folder is empty**
+
+This usually means the chapter failed to download. Rika is still figuring out why this happens sometimes. Here are a few things you can try:
+- **Workaround #1:** Delete the manifest file (if it exists) in the `downloads/` folder and try again. Manifest file keeps track of which chapters have been downloaded; and deleting it can help reset the download state and force the tool to re-download the chapter.
+- **Workaround #2:** Close the tool first. Then, deactivate and reactivate the virtual environment, and run the tool again using the following command in the terminal:
+  ```
+  deactivate && .venv\Scripts\activate && python main.py
+  ```
+
+**5. The tool successfully downloaded the images but failed to convert them to PDF**
+
+Retry downloading the chapter (or click on "Download Selected Chapters" button on the GUI). Typically the tool will pick up where it left off and convert the already downloaded images to PDF.
+
+Before retrying, be sure to select the chapters that failed to convert so the tool can start from where it left off.
+
+**6. I got the error message: "Failed to convert images to PDF: Page size must be between 3 and 14,400 PDF units"**
+
+This error occurs when downloading webtoon (vertical scrolling) format manga. The images are too tall or too short to fit within the PDF page size limits. Ideally the image width or height should be between 4 and 18,666 pixels. 
+
+A workaround is to go to `downloads/` folder and find the affected chapter folder. Look for image files that are too tall or too short, and then manually delete them. After that, try downloading the chapter again. If the images are already downloaded, the tool will convert them to PDF.
+
+**7. Downloads are slow**
+
+Try increasing the `--image-workers` value in CLI mode, or adjust the "Image Workers" slider in the GUI.\
+Personally, Rika wouldn't recommend setting it too high if your computer doesn't have a lot of RAM, especially when the computer get heated up and the fans start to spin loudly.
 
 ---
 
