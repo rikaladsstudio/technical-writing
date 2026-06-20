@@ -234,11 +234,12 @@ Before retrying, be sure to select the chapters that failed to convert so the to
 
 This error occurs when downloading webtoon (vertical scrolling) format manga. The images are too tall or too short to fit within the PDF page size limits. Ideally the image width or height should be between 4 and 19,200 pixels. 
 
-A workaround is to go to `downloads/` folder and find the affected chapter folder. Look for image files that are too tall or too short, and then manually delete them. After that, try downloading the chapter again. If the images are already downloaded, the tool will convert them to PDF.
+Here's a workaround. First, find the affected pdf which is usually 0KB in size or corrupted when opened. Then, go to `downloads/` folder and find the affected chapter folder. Look for image files with height that is either smaller than 4 pixels or larger than 19,200 pixels, and then manually delete them. After that, try downloading the chapter again. If the images are already downloaded, the tool will convert them to PDF.
 
 **7. Downloads are slow**
 
-Try increasing the `--image-workers` value in CLI mode, or adjust the "Image Workers" slider in the GUI.\
+Try increasing the `--image-workers` value in CLI mode, or adjust the "Image Workers" slider in the GUI.
+
 Personally, Rika wouldn't recommend setting it too high if your computer doesn't have a lot of RAM, especially when the computer get heated up and the fans start to spin loudly.
 
 ---
