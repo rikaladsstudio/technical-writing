@@ -63,12 +63,12 @@ You need to open a Terminal *inside* the folder you just unzipped.
 In this step, you will set up a virtual environment and install the required dependencies in that environment. A virtual environment isolates the tool's dependencies from your main system. That way, the tool's requirements won't interfere with other programs on your computer. Think of it as having a private, separated room for each of your toys or projects, instead of throwing everything into one giant, messy closet. 
 
 
-In the Terminal, type the following command to set up the virtual environment:
+1. In the Terminal, type the following command to set up the virtual environment:
 ```
 python -m venv .venv
 ```
 
-After running this command, activate the virtual environment by typing:
+2. After running this command, activate the virtual environment by typing:
 ```
 .venv\Scripts\activate
 ```
@@ -78,19 +78,19 @@ You should see `(venv)` at the beginning of your terminal prompt, like this. Thi
 (venv) C:\where\you\extracted\kaliscan-downloader>
 ```
 
-Then install the required dependencies by typing:
+3. Then install the required dependencies by typing:
 ```
 pip install -r requirements.txt
 ```
 
-Then install playwright for the required chromium browsers (e.g. Google Chrome, Microsoft Edge, etc.) by typing:
+4. Then install playwright for the required chromium browsers (e.g. Google Chrome, Microsoft Edge, etc.) by typing:
 ```
 playwright install chromium
 ```
 
 Wait for each command to finish before running the next. This may take a few minutes - that's normal. Once everything is installed, you're ready to use the tool.
 
-Type the following command to verify that the tool is installed correctly:
+5. Type the following command to verify that the tool is installed correctly:
 ```
 python main.py
 ```
@@ -106,7 +106,7 @@ To close the tool, simply click the **X** button in the top-right corner of the 
 
 ### Launching the App
 
-Open a Terminal in the tool's folder (Follow the instructions in [Step 3](#step-3---open-a-terminal-in-the-tools-folder)) and activate the virtual environment (if not already active). 
+1. Open a Terminal in the tool's folder (Follow the instructions in [Step 3](#step-3---open-a-terminal-in-the-tools-folder)) and activate the virtual environment (if not already active). 
 ```
 .venv\Scripts\activate
 ```
@@ -116,7 +116,7 @@ You should see `(venv)` at the beginning of your terminal prompt, like this. Thi
 (venv) C:\where\you\extracted\kaliscan-downloader>
 ```
 
-In the Terminal, type:
+2. In the Terminal, type:
 ```
 python main.py
 ```
