@@ -64,41 +64,41 @@ In this step, you will set up a virtual environment and install the required dep
 
 
 1. In the Terminal, type the following command to set up the virtual environment:
-```
-python -m venv .venv
-```
+   ```
+    python -m venv .venv
+   ```
 
 2. After running this command, activate the virtual environment by typing:
-```
-.venv\Scripts\activate
-```
+   ```
+    .venv\Scripts\activate
+   ```
 
-You should see `(venv)` at the beginning of your terminal prompt, like this. This confirms that the virtual environment is active:
-```
-(venv) C:\where\you\extracted\kaliscan-downloader>
-```
+   You should see `(venv)` at the beginning of your terminal prompt, like this. This confirms that the virtual environment is active:
+   ```
+   (venv) C:\where\you\extracted\kaliscan-downloader>
+   ```
 
 3. Then install the required dependencies by typing:
-```
-pip install -r requirements.txt
-```
+   ```
+   pip install -r requirements.txt
+   ```
 
 4. Then install playwright for the required chromium browsers (e.g. Google Chrome, Microsoft Edge, etc.) by typing:
-```
-playwright install chromium
-```
+   ```
+   playwright install chromium
+   ```
 
-Wait for each command to finish before running the next. This may take a few minutes - that's normal. Once everything is installed, you're ready to use the tool.
+   Wait for each command to finish before running the next. This may take a few minutes - that's normal. Once everything is installed, you're ready to use the tool.
 
 5. Type the following command to verify that the tool is installed correctly:
-```
-python main.py
-```
+   ```
+   python main.py
+   ```
 
-If the tool is installed correctly, a window will appear - that's the tool!
-![gui](./images/gui.png)
+   If the tool is installed correctly, a window will appear - that's the tool!
+   ![gui](./images/gui.png)
 
-To close the tool, simply click the **X** button in the top-right corner of the window. Alternatively, you can press `Ctrl + C` in the Terminal to stop the tool.
+   To close the tool, simply click the **X** button in the top-right corner of the window. Alternatively, you can press `Ctrl + C` in the Terminal to stop the tool.
 
 ---
 
@@ -107,21 +107,20 @@ To close the tool, simply click the **X** button in the top-right corner of the 
 ### Launching the App
 
 1. Open a Terminal in the tool's folder (Follow the instructions in [Step 3](#step-3---open-a-terminal-in-the-tools-folder)) and activate the virtual environment (if not already active). 
-```
-.venv\Scripts\activate
-```
+   ```
+   .venv\Scripts\activate
+   ```
 
-You should see `(venv)` at the beginning of your terminal prompt, like this. This confirms that the virtual environment is active:
-```
-(venv) C:\where\you\extracted\kaliscan-downloader>
-```
+   You should see `(venv)` at the beginning of your terminal prompt, like this. This confirms that the virtual environment is active:
+   ```
+   (venv) C:\where\you\extracted\kaliscan-downloader>
+   ```
 
 2. In the Terminal, type:
-```
-python main.py
-```
-
-A window will appear - that's the tool!
+   ```
+   python main.py
+   ```
+   A window will appear - that's the tool!
 
 > **Note: In case if you got tired of typing the same commands over and over again, you can create a BAT file to open the GUI tool. See this [guide](./createBATFile.md) for more details. Before creating the BAT file, make sure you have successfully opened the GUI tool at least once following the instructions above.**
 
@@ -131,7 +130,7 @@ A window will appear - that's the tool!
 
 **1. Get the manga URL**
 
-Go to [kaliscan.io](https://kaliscan.io) in your browser, find the manga you want, and copy the URL from the address bar. It will look something like:
+Go to [kaliscan.io](https://kaliscan.io) in your browser find the manga you want, and copy the URL from the address bar. It will look something like:
 ```
 https://kaliscan.io/manga/your-manga-title
 ```
@@ -221,10 +220,11 @@ CBZ is a standard comic book format. To read CBZ files, download a free app like
 
 This usually means the chapter failed to download. Rika is still figuring out why this happens sometimes. Here are a few things you can try:
 - **Workaround #1:** Delete the manifest file (if it exists) in the `downloads/` folder and try again. Manifest file keeps track of which chapters have been downloaded; and deleting it can help reset the download state and force the tool to re-download the chapter.
-- **Workaround #2:** Close the tool first. Then, deactivate and reactivate the virtual environment, and run the tool again using the following command in the terminal:
+- **Workaround #2:** Close the tool first. Delete the manifest file in the `downloads/` folder (see **Workaround #1** above for more details). Then, deactivate and reactivate the virtual environment, and run the tool again using the following command in the terminal:
   ```
   deactivate && .venv\Scripts\activate && python main.py
   ```
+  > Note: Rika haven't tried this workaround yet as Rika is unable to reproduce the issue consistently when **Workaround #1** doesn't work.
 
 **5. The tool successfully downloaded the images but failed to convert them to PDF**
 
@@ -236,7 +236,12 @@ Before retrying, be sure to select the chapters that failed to convert so the to
 
 This error occurs when downloading webtoon (vertical scrolling) format manga. The images are too tall or too short to fit within the PDF page size limits. Ideally the image width or height should be between 4 and 19,200 pixels. 
 
-Here's a workaround. First, find the affected pdf which is usually 0KB in size or corrupted when opened. Then, go to `downloads/` folder and find the affected chapter folder. Look for image files with height that is either smaller than 4 pixels or larger than 19,200 pixels, and then manually delete them. After that, try downloading the chapter again. If the images are already downloaded, the tool will convert them to PDF.
+Here's a workaround:
+
+  1. First, find the affected pdf(s) in the `downloads/` folder which are usually 0KB in size or corrupted when opened. 
+  2. Then, identify the affected chapter folder(s) and go into them. 
+  3. Look for image files with height / width that is either smaller than 4 pixels or larger than 19,200 pixels, and then manually delete them. Alternatively, you can resize or split them using an image editor so that their dimensions fall within the acceptable range. 
+  4. After that, try downloading the chapter again. If the images are already downloaded, the tool will convert them to PDF.
 
 **7. Downloads are slow**
 
